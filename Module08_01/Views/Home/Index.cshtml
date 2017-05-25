@@ -11,7 +11,10 @@
     <title>Index</title>
 </head>
 <body>
-    <div> 
+    <div>
+        @Html.ActionLink("refresh", "HelloWorld", "Home")
+        <hr />
+        @Html.Action("HelloWorld", "Home") 
     </div>
 </body>
 </html>
