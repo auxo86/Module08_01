@@ -18,11 +18,19 @@
         <hr />
         Server Time: @DateTime.Now
         <div id="divMessage" style="background-color:yellow">xx</div>
+        <hr />
         @Ajax.ActionLink("AJAX HelloWorld", "HelloWorld", "Home", new AjaxOptions
            {
-               HttpMethod="GET",
-               UpdateTargetId= "divMessage",
-               InsertionMode=InsertionMode.Replace
+               HttpMethod = "GET",
+               UpdateTargetId = "divMessage",
+               InsertionMode = InsertionMode.InsertBefore
+           })
+        <hr />
+        @Ajax.ActionLink("AJAX HelloWorld2", "HelloWorld2", "Home", new { username="Mary" }, new AjaxOptions
+           {
+               HttpMethod = "GET",
+               UpdateTargetId = "divMessage",
+               InsertionMode = InsertionMode.InsertAfter
            })
     </div>
 
